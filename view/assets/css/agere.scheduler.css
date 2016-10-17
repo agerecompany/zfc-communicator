@@ -1,0 +1,130 @@
+.container-fluid #scheduler_here {
+	height: 800px;
+	width: 100%;
+	border: 1px solid #cecece;
+}
+
+.dhx_cal_event div.dhx_footer,
+.dhx_cal_event.past_event div.dhx_footer,
+.dhx_cal_event.event_english div.dhx_footer,
+.dhx_cal_event.event_math div.dhx_footer,
+.dhx_cal_event.event_science div.dhx_footer {
+	margin-top: 0px;
+	height: 2px;
+}
+
+.dhx_cal_event_line:hover,
+.dhx_cal_event:hover .dhx_body,
+.dhx_cal_event.selected .dhx_body,
+.dhx_cal_event.dhx_cal_select_menu .dhx_body {
+	opacity: 0.8;
+}
+
+/* ==================================================================================================
+		@ua - Ці CSS селектори змінюються динамічно і залежать від значеннь "key": 'petrov', 'klim', 'tkachuk'
+		@en - These CSS selectors change dynamically and depend on values "key": 'petrov', 'klim', 'tkachuk'
+			var subject = [
+				{ key: 'petrov', label: 'Петров П.Г.'},
+				{ key: 'klim', label: 'Климентьев В.Г.'},
+				{ key: 'tkachuk', label: 'Ткачук Д.Р.'},
+			];
+
+	*/
+.dhx_cal_event.event_petrov div, .dhx_cal_event_line.event_petrov {
+	background-color: orange !important;
+	border-color: #a36800 !important;
+}
+
+.dhx_cal_event_clear.event_petrov {
+	color: orange !important;
+}
+
+.dhx_cal_event.event_klim div, .dhx_cal_event_line.event_klim {
+	background-color: #36BD14 !important;
+	border-color: #698490 !important;
+}
+
+.dhx_cal_event_clear.event_klim {
+	color: #36BD14 !important;
+}
+
+.dhx_cal_event.event_tkachuk div, .dhx_cal_event_line.event_tkachuk {
+	background-color: #FC5BD5 !important;
+	border-color: #839595 !important;
+}
+
+.dhx_cal_event_clear.event_tkachuk {
+	color: #B82594 !important;
+}
+
+/* ================================================================================================== */
+
+/* ==================================================================================================
+	@ua - Необхідні поправки
+	@en - Necessary amendments
+	*/
+.dhx_section_time select {
+	width: auto;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.dhx_cal_ltext select {
+	height: 20px;
+}
+
+/*==================================================================================================
+	@ua - Тут можна визначити колір або фон для вихідних днів (субота та неділя)
+	@en - You can determine the color or background for the weekend (Saturday and Sunday)
+*/
+.dhx_scale_holder_now.weekday, .dhx_scale_holder.weekday {
+	background-image: url(/assets/imgs/week_bg.png);
+}
+
+.dhx_cal_header {
+	height: 35px !important;
+}
+
+.dhx_scale_bar {
+	height: 33px !important;
+}
+
+.dhx_scheduler_month .dhx_cal_data {
+	top: 96px !important;
+}
+
+.dhx_scheduler_month .dhx_cal_header {
+	left: 6px !important;
+}
+/* ================================================================================================== */
+
+/*==================================================================================================
+	@ua - Це потрібно для позначок кольорів для лікарів
+	@en - This is to label colors for doctors
+*/
+.doctors h5 {
+	margin-left: 25px;
+	width: 200px;
+}
+.circle-color {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+}
+
+.color-1 {
+	background: orange;
+}
+
+.color-2 {
+	background: #FC5BD5;
+}
+
+.color-3 {
+	background: #36BD14;
+}
+
+.color-4 {
+	background: #1796b0;
+}
+/*==================================================================================================
