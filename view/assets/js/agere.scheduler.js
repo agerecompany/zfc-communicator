@@ -97,7 +97,7 @@ AgereCommunicator = {
 			/** select choose *///
 
 
-			{name:"subject", height:20, type:"select", options: subject, map_to:"subject" },
+			{name:"Доктор", height:20, type:"select", options: subject, map_to:"subject" },
 			{name:"time", height:72, type:"time", map_to:"auto" }
 		];
 

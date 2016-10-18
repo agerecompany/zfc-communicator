@@ -44,6 +44,7 @@ return [
                         'js/dhtmlx/dhtmlxscheduler_year_view.js',
                         'js/dhtmlx/dhtmlxscheduler_active_links.js',
                         'js/agere.scheduler.js',
+                        'js/dhtmlx/locale/locale_ru.js',
                     ],
                 ],
                 'communicator_images' => [
