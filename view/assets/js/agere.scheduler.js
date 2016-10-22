@@ -11,8 +11,13 @@ AgereCommunicator = {
 		scheduler.config.details_on_create = true;
 		scheduler.config.touch = "force";
 		scheduler.locale.labels.workweek_tab = "W-Week"
+		scheduler.config.readonly_form = true;
 
-
+//block all modifications
+		scheduler.attachEvent("onBeforeDrag",function(){return false;})
+		scheduler.attachEvent("onClick",function(){return false;})
+		scheduler.config.details_on_dblclick = true;
+		scheduler.config.dblclick_create = false;
 
 		var step = 15;
 		var format = scheduler.date.date_to_str("%H:%i");
@@ -104,9 +109,12 @@ AgereCommunicator = {
 		scheduler.init('scheduler_here', new Date(), "week");
 
 		scheduler.setLoadMode("week");
-		scheduler.load("communicator/test");
+		scheduler.load("communicator/sync");
+		/*scheduler.load("/assets/events.xml",function(){
+			scheduler.showLightbox("1261150511");
+		});*/
 
-		var dp = new dataProcessor("communicator/test");
+		var dp = new dataProcessor("communicator/sync");
 		dp.init(scheduler);
 	},
 	

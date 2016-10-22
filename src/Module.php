@@ -1,6 +1,8 @@
 <?php
 namespace Agere\Communicator;
 
+use Zend\EventManager\EventInterface;
+
 class Module {
 
 	public function getConfig()
@@ -8,19 +10,11 @@ class Module {
 		return include __DIR__ . '/../config/module.config.php';
 	}
 
-	/*public function getViewHelperConfig()
-	{
-		return array(
-			'factories' => array(
-				'menu' => function($vhm) {
-					$sm = $vhm->getServiceLocator();
-					//$authService = $locator->get('UserAuthentication')->getAuthService();
-					//$user = new \Agere\Users\View\Helper\User($authService);
-					$user = $vhm->get('user');
-					return new \Agere\Menu\View\Helper\Menu($user->getUser(), $sm);
-				},
-			),
-		);
-	}*/
+	public function onBootstrap(EventInterface $e) {
+		$eventManager = $e->getTarget()->getEventManager();
+		$sm = $e->getApplication()->getServiceManager();
 
+		$eventManager->attach((new Listener\CreateVisitListener())->setServiceLocator($sm));
+
+	}
 }

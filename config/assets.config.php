@@ -26,25 +26,33 @@ return [
             'collections' => [
                 'communicator_css' => [
                     'assets' => [
-                        'css/dhtmlxscheduler_flat.css',
-                        'css/agere.scheduler.css'
+                        'css/dhtmlx/dhtmlxscheduler_flat.css',
                         //'css/dhtmlxscheduler.css',
+                        'css/agere.scheduler.css'
                     ],
                 ],
                 'communicator_js' => [
                     'assets' => [
-                        'js/dhtmlx//dhtmlxscheduler.js',
-                        'js/dhtmlx/dhtmlxscheduler_agenda_view.js',
+                        'js/dhtmlx/dhtmlxscheduler.js',
                         'js/dhtmlx/dhtmlxscheduler_readonly.js',
+                        'js/dhtmlx/dhtmlxscheduler_minical.js',
+                        'js/dhtmlx/dhtmlxscheduler_pdf.js',
+                        'js/dhtmlx/locale/locale_ru.js',
+                        'js/dhtmlx/dhtmlxscheduler_active_links.js',
+                        'js/agere.scheduler.js',
+
+
+                        /*'js/dhtmlx/dhtmlxscheduler_readonly.js',
+                        'js/dhtmlx/dhtmlxscheduler_agenda_view.js',
                         'js/dhtmlx/dhtmlxscheduler_minical.js',
                         'js/dhtmlx/dhtmlxscheduler_pdf.js',
                         'js/dhtmlx/dhtmlxscheduler.js',
                         'js/dhtmlx/dhtmlxscheduler_limit.js',
-                        //'js/dhtmlx/dhtmlxscheduler_quick_info.js',
+                        'js/dhtmlx/dhtmlxscheduler_quick_info.js',
                         'js/dhtmlx/dhtmlxscheduler_year_view.js',
                         'js/dhtmlx/dhtmlxscheduler_active_links.js',
                         'js/agere.scheduler.js',
-                        'js/dhtmlx/locale/locale_ru.js',
+                        'js/dhtmlx/locale/locale_ru.js',*/
                     ],
                 ],
                 'communicator_images' => [
