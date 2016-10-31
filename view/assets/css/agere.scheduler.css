@@ -1,7 +1,11 @@
+/* ====================START==============================================================================
+		@ua - Необхідно для відображення комунікатора
+		@en - It is necessary to display communicator
+*/
 .container-fluid #scheduler_here {
-	height: 800px;
-	width: 100%;
-	border: 1px solid #cecece;
+height: 800px;
+width: 100%;
+border: 1px solid #cecece;
 }
 
 .dhx_cal_event div.dhx_footer,
@@ -19,8 +23,9 @@
 .dhx_cal_event.dhx_cal_select_menu .dhx_body {
 	opacity: 0.8;
 }
+/* =======================END=========================================================================== */
 
-/* ==================================================================================================
+/* ====================START==============================================================================
 		@ua - Ці CSS селектори змінюються динамічно і залежать від значеннь "key": 'petrov', 'klim', 'tkachuk'
 		@en - These CSS selectors change dynamically and depend on values "key": 'petrov', 'klim', 'tkachuk'
 			var subject = [
@@ -57,48 +62,11 @@
 	color: #B82594 !important;
 }
 
-/* ================================================================================================== */
+/* =======================END=========================================================================== */
 
-/* ==================================================================================================
-	@ua - Необхідні поправки
-	@en - Necessary amendments
-	*/
-.dhx_section_time select {
-	width: auto;
-	height: auto;
-	margin-bottom: 20px;
-}
 
-.dhx_cal_ltext select {
-	height: 20px;
-}
 
-/*==================================================================================================
-	@ua - Тут можна визначити колір або фон для вихідних днів (субота та неділя)
-	@en - You can determine the color or background for the weekend (Saturday and Sunday)
-*/
-.dhx_scale_holder_now.weekday, .dhx_scale_holder.weekday {
-	background-image: url(/assets/imgs/week_bg.png);
-}
-
-.dhx_cal_header {
-	height: 35px !important;
-}
-
-.dhx_scale_bar {
-	height: 33px !important;
-}
-
- .dhx_cal_data {
-	top: 96px !important;
-}
-
-.dhx_scheduler_month .dhx_cal_header {
-	left: 6px !important;
-}
-/* ================================================================================================== */
-
-/*==================================================================================================
+/*=====================================START=============================================================
 	@ua - Це потрібно для позначок кольорів для лікарів
 	@en - This is to label colors for doctors
 */
@@ -127,4 +95,47 @@
 .color-4 {
 	background: #5B9BE0;
 }
-/*==================================================================================================
+/*=========================================END=========================================================
+
+/*=========================================START=========================================================
+	@ua - Тут можна визначити колір або фон для вихідних днів (субота та неділя)
+	@en - You can determine the color or background for the weekend (Saturday and Sunday)
+*/
+.dhx_scale_holder_now.weekday, .dhx_scale_holder.weekday {
+	background-image: url(/assets/imgs/week_bg.png);
+}
+
+
+/* ===========================================END======================================================= */
+
+/* =============================================START=====================================================
+	@ua - Необхідні поправки
+	@en - Necessary amendments
+	*/
+.dhx_section_time select {
+	width: auto;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.dhx_cal_ltext select {
+	height: 20px;
+}
+
+.dhx_cal_header {
+	height: 35px !important;
+}
+
+.dhx_scale_bar {
+	height: 33px !important;
+}
+
+.dhx_scheduler_month .dhx_cal_data {
+	top: 96px !important;
+}
+
+.dhx_scheduler_month .dhx_cal_header {
+	left: 6px !important;
+}
+/* ===========================================END======================================================= */
+

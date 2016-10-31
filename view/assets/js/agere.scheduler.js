@@ -1,7 +1,10 @@
 AgereCommunicator = {
 	init: function() {
+		scheduler.config.mark_now = true;
 		scheduler.config.xml_date="%Y-%m-%d %H:%i";
-		scheduler.config.time_step = 5;
+		scheduler.config.now_date = new Date();
+
+		scheduler.config.time_step = 15;
 		scheduler.config.multi_day = true;
 		scheduler.locale.labels.section_subject = "Subject";
 		scheduler.config.first_hour = 9;
@@ -13,7 +16,7 @@ AgereCommunicator = {
 		scheduler.locale.labels.workweek_tab = "W-Week"
 		scheduler.config.readonly_form = true;
 
-//block all modifications
+		//block all modifications
 		scheduler.attachEvent("onBeforeDrag",function(){return false;})
 		scheduler.attachEvent("onClick",function(){return false;})
 		scheduler.config.details_on_dblclick = true;

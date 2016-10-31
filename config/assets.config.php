@@ -27,7 +27,7 @@ return [
                 'communicator_css' => [
                     'assets' => [
                         'css/dhtmlx/dhtmlxscheduler_flat.css',
-                        //'css/dhtmlxscheduler.css',
+                        //'css/dhtmlx/dhtmlxscheduler.css',
                         'css/agere.scheduler.css'
                     ],
                 ],
@@ -39,8 +39,8 @@ return [
                         'js/dhtmlx/dhtmlxscheduler_pdf.js',
                         'js/dhtmlx/locale/locale_ru.js',
                         'js/dhtmlx/dhtmlxscheduler_active_links.js',
+                        'js/dhtmlx/dhtmlxscheduler_limit.js',
                         'js/agere.scheduler.js',
-
 
                         /*'js/dhtmlx/dhtmlxscheduler_readonly.js',
                         'js/dhtmlx/dhtmlxscheduler_agenda_view.js',

@@ -14,7 +14,6 @@ class IndexController extends AbstractActionController
     {
         $view = new ViewModel();
         //$view->setTerminal(true);
-
         return $view;
     }
 
@@ -26,6 +25,7 @@ class IndexController extends AbstractActionController
         $table = $config['communicator']['table'];
         $columns = $config['communicator']['columns'];
         $res = mysqli_connect($db['hostname'], $db['username'], $db['password'], $db['database']);
+        mysqli_set_charset($res, "utf8");
         $scheduler = new SchedulerConnector($res);
         $scheduler->render_table($table, implode($columns, ','));
     }

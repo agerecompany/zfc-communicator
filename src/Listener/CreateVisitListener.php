@@ -4,37 +4,52 @@
  * @author Vlad Kozak <vk@agere.com.ua>
  * @datetime: 21.10.2016 14:56
  */
-
 namespace Agere\Communicator\Listener;
-
-use Zend\ServiceManager\ServiceLocatorAwareTrait;
 
 use Zend\EventManager\EventManagerInterface;
 use Zend\EventManager\ListenerAggregateInterface;
 use Zend\EventManager\ListenerAggregateTrait;
-
+use Zend\EventManager\Event;
 use Agere\Communicator\Service\CommunicatorService;
+use Agere\User\Service\UserService;
 use Agere\Visit\Controller\VisitController;
 
-class CreateVisitListener implements ListenerAggregateInterface {
-
+class CreateVisitListener implements ListenerAggregateInterface
+{
     use ListenerAggregateTrait;
-    use ServiceLocatorAwareTrait;
 
-    public function attach(EventManagerInterface $events) {
-        $sm = $this->getServiceLocator();
+    public function __construct(UserService $userService = null, CommunicatorService $communicatorService = null)
+    {
+        $this->userService = $userService;
+        $this->communicatorService = $communicatorService;
+    }
+
+    /**
+     * @return UserService
+     */
+    public function getUserService()
+    {
+        return $this->userService;
+    }
+
+    /**
+     * @return CommunicatorService
+     */
+    public function getCommunicatorService()
+    {
+        return $this->communicatorService;
+    }
+
+    public function attach(EventManagerInterface $events)
+    {
         $sem = $events->getSharedManager(); // shared events manager
-
-        $this->listeners[] = $sem->attach(VisitController::class, 'eventEditVisit', function($e) use($sm) {
+        $this->listeners[] = $sem->attach(VisitController::class, 'createVisit', function (Event $e) {
             $item = $e->getTarget();
             $visit = $e->getParam('visit');
-            $plannedAt = $visit['plannedAt'];
-            $plannedEndAt = $visit['plannedEndAt'];
-            //$oldStatus = $e->getParam('oldStatus');
+            $user = $this->getUserService()->find($id = (int) $visit['user']);
             /** @var CommunicatorService $communicatorService */
-            $communicatorService = $sm->get('CommunicatorService');
-            $communicatorService->save($visit, $item, $sm);
-
-        }, 100);
+            $this->getCommunicatorService()->save($visit, $item, $user);
+        }, 100
+        );
     }
 }
