@@ -17,9 +17,8 @@ class CommunicatorService extends DomainServiceAbstract
 
     public function save($visit, $item, $user)
     {
-        $startAt = \DateTime::createFromFormat('Y-m-d H:i', $visit['plannedAt']);
-        $endedAt = \DateTime::createFromFormat('Y-m-d H:i', $visit['plannedEndAt']);
-
+        $startAt = \DateTime::createFromFormat('d.m.Y H:i', $visit['plannedAt']);
+        $endedAt = \DateTime::createFromFormat('d.m.Y H:i', $visit['plannedEndAt']);
         //$userService = $sm->get('UserService');
         //$user = $userService->find($id = (int) $visit['user']);
         $communicator = $this->getObjectModel();
@@ -27,6 +26,11 @@ class CommunicatorService extends DomainServiceAbstract
         $communicator->setEndedAt($endedAt);
         $communicator->setSubject($user->getMnemo());
         $communicator->setDescription($item->getPatient()->getFio());
+        $communicator->setDiagnosis($visit['diagnosis']);
+        $communicator->setFio($item->getPatient()->getFio());
+        $communicator->setAnamnesis($visit['anamnesis']);
+        $communicator->setTreatment($visit['treatment']);
+        $communicator->setRecommendation($visit['recommendation']);
 
         $om = $this->getObjectManager();
         $om->persist($communicator);

@@ -94,7 +94,13 @@ AgereCommunicator = {
 		];
 
 		scheduler.config.lightbox.sections=[
-			{name:"description", height:43, map_to:"text", type:"textarea" , focus:true},
+			//{name:"description", height:43, map_to:"text", type:"textarea" , focus:true},
+			{name:"Доктор", height:20, type:"select", options: subject, map_to:"subject" },
+			{name:"ФИО:", height:40, map_to:"fio", type:"textarea" , focus:true},
+			{name:"Диагноз", height:40, map_to:"diagnosis", type:"textarea" , focus:true},
+			{name:"Анамнез", height:40, map_to:"anamnesis", type:"textarea" , focus:true},
+			{name:"Лечение", height:40, map_to:"treatment", type:"textarea" , focus:true},
+			{name:"Рекомендации", height:40, map_to:"recommendation", type:"textarea" , focus:true},
 
 
 			/** select choose *///
@@ -105,7 +111,6 @@ AgereCommunicator = {
 			/** select choose *///
 
 
-			{name:"Доктор", height:20, type:"select", options: subject, map_to:"subject" },
 			{name:"time", height:72, type:"time", map_to:"auto" }
 		];
 

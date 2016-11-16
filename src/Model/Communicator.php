@@ -51,6 +51,36 @@ class Communicator
     private $subject;
 
     /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true, length=255)
+     */
+    private $fio;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true, length=255)
+     */
+    private $anamnesis;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true, length=255)
+     */
+    private $diagnosis;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true, length=255)
+     */
+    private $recommendation;
+
+    /**
+     * @var string
+     * @ORM\Column(type="string", nullable=true, length=255)
+     */
+    private $treatment;
+
+    /**
      * @return int
      */
     public function getId()
@@ -145,5 +175,99 @@ class Communicator
         return $this;
     }
 
+    /**
+     * @return string
+     */
+    public function getFio()
+    {
+        return $this->fio;
+    }
 
+    /**
+     * @param string $fio
+     * @return Communicator
+     */
+    public function setFio($fio)
+    {
+        $this->fio = $fio;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAnamnesis()
+    {
+        return $this->anamnesis;
+    }
+
+    /**
+     * @param string $anamnesis
+     * @return Communicator
+     */
+    public function setAnamnesis($anamnesis)
+    {
+        $this->anamnesis = $anamnesis;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDiagnosis()
+    {
+        return $this->diagnosis;
+    }
+
+    /**
+     * @param string $diagnosis
+     * @return Communicator
+     */
+    public function setDiagnosis($diagnosis)
+    {
+        $this->diagnosis = $diagnosis;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRecommendation()
+    {
+        return $this->recommendation;
+    }
+
+    /**
+     * @param string $recommendation
+     * @return Communicator
+     */
+    public function setRecommendation($recommendation)
+    {
+        $this->recommendation = $recommendation;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTreatment()
+    {
+        return $this->treatment;
+    }
+
+    /**
+     * @param string $treatment
+     * @return Communicator
+     */
+    public function setTreatment($treatment)
+    {
+        $this->treatment = $treatment;
+
+        return $this;
+    }
+    
 }
