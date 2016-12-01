@@ -35,14 +35,13 @@ return [
     'service_manager' => [
         'aliases' => [
             'CommunicatorService' => Service\CommunicatorService::class,
-            //'VisitListener' => Listener\VisitListener::class,
+
         ],
         'invokables' => [
             Service\CommunicatorService::class => Service\CommunicatorService::class,
         ],
         'factories' => [
             Listener\CreateVisitListener::class => Listener\Factory\CreateVisitListenerFactory::class,
-
         ]
     ],
 

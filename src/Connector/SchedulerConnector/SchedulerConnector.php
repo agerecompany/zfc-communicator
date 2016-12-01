@@ -1,5 +1,6 @@
 <?php
 namespace Agere\Communicator\Connector\SchedulerConnector;
+
 use Agere\Communicator\Connector\BaseConnector\Connector;
 use Agere\Communicator\Connector\BaseConnector\ConnectorRefactor;
 
@@ -43,6 +44,7 @@ class SchedulerConnector extends Connector {
             name of class which will be used for rendering.
     */
     public function __construct($res,$type=false,$item_type=false,$data_type=false,$render_type=false){
+
         if (!$item_type) $item_type="SchedulerDataItem";
         if (!$data_type) $data_type="SchedulerDataProcessor";
         if (!$render_type) $render_type="RenderStrategy";

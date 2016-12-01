@@ -35,31 +35,49 @@ border: 1px solid #cecece;
 			];
 
 	*/
-.dhx_cal_event.event_petrov div, .dhx_cal_event_line.event_petrov {
-	background-color: orange !important;
+.dhx_cal_event.event_klymentev div, .dhx_cal_event_line.event_klymentev {
+	background-color: #FFA500 !important;
 	border-color: #a36800 !important;
 }
 
-.dhx_cal_event_clear.event_petrov {
-	color: orange !important;
+.dhx_cal_event_clear.event_klymentev {
+	color: #FFA500 !important;
 }
 
-.dhx_cal_event.event_klim div, .dhx_cal_event_line.event_klim {
-	background-color: #36BD14 !important;
+.dhx_cal_event.event_barskyy div, .dhx_cal_event_line.event_barskyy {
+	background-color: #FC5BD5 !important;
 	border-color: #698490 !important;
 }
 
-.dhx_cal_event_clear.event_klim {
-	color: #36BD14 !important;
+.dhx_cal_event_clear.event_barskyy {
+	color: #FC5BD5 !important;
 }
 
-.dhx_cal_event.event_tkachuk div, .dhx_cal_event_line.event_tkachuk {
-	background-color: #FC5BD5 !important;
+.dhx_cal_event.event_shilenko div, .dhx_cal_event_line.event_shilenko {
+	background-color: #36BD14 !important;
 	border-color: #839595 !important;
 }
 
-.dhx_cal_event_clear.event_tkachuk {
-	color: #B82594 !important;
+.dhx_cal_event_clear.event_shilenko {
+	color: #36BD14 !important;
+}
+
+.dhx_cal_event.event_sabodash div, .dhx_cal_event_line.event_sabodash {
+	background-color: #5B9BE0 !important;
+	border-color: #839595 !important;
+}
+
+.dhx_cal_event_clear.event_sabodash {
+	color: #5B9BE0 !important;
+}
+
+.dhx_cal_event.event_yushchenko div, .dhx_cal_event_line.event_yushchenko {
+	background-color: #E00306 !important;
+	border-color: #839595 !important;
+}
+
+.dhx_cal_event_clear.event_yushchenko {
+	color: #E00306 !important;
 }
 
 /* =======================END=========================================================================== */
@@ -81,7 +99,7 @@ border: 1px solid #cecece;
 }
 
 .color-1 {
-	background: orange;
+	background: #FFA500;
 }
 
 .color-2 {
@@ -94,6 +112,10 @@ border: 1px solid #cecece;
 
 .color-4 {
 	background: #5B9BE0;
+}
+
+.color-5 {
+	background: #E00306;
 }
 /*=========================================END=========================================================
 

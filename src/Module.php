@@ -2,8 +2,9 @@
 namespace Agere\Communicator;
 
 use Zend\Mvc\MvcEvent;
-use Agere\Visit\Listener\VisitListener;
 use Zend\EventManager\EventInterface;
+
+use Zend\EventManager\Event;
 
 class Module {
 
@@ -20,7 +21,6 @@ class Module {
 		$eventManager->attach(MvcEvent::EVENT_DISPATCH, function() use($sm, $eventManager) {
 			$eventManager->attach($sm->get(Listener\CreateVisitListener::class));
 		}, 100);
-
 
 	}
 }

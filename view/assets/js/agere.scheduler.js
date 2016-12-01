@@ -88,9 +88,11 @@ AgereCommunicator = {
 		};
 
 		var subject = [
-			{ key: 'petrov', label: 'Петров П.Г.'},
-			{ key: 'klim', label: 'Климентьев В.Г.'},
-			{ key: 'tkachuk', label: 'Ткачук Д.Р.'},
+			{ key: 'klymentev', label: 'Климентьев В.Г.'},
+			{ key: 'barskyy', label: 'Барский М.Л.'},
+			{ key: 'shilenko', label: 'Шиленко Д.Р.'},
+			{ key: 'sabodash', label: 'Сабадош О.Р.'},
+			{ key: 'yushchenko', label: 'Ющенко Л.Ф.'},
 		];
 
 		scheduler.config.lightbox.sections=[
