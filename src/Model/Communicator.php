@@ -8,7 +8,7 @@
 namespace Agere\Communicator\Model;
 
 use Doctrine\ORM\Mapping as ORM;
-use Agere\Core\Model\DomainAwareTrait;
+use Popov\ZfcCore\Model\DomainAwareTrait;
 
 /**
  * @ORM\Entity(repositoryClass="Agere\Communicator\Model\Repository\CommunicatorRepository")

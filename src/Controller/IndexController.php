@@ -1,7 +1,7 @@
 <?php
 namespace Agere\Communicator\Controller;
 
-use Agere\Core\Service\ServiceManagerAwareTrait;
+use Popov\ZfcCore\Service\ServiceManagerAwareTrait;
 use Zend\View\Model\ViewModel;
 use Zend\Mvc\Controller\AbstractActionController;
 use Agere\Communicator\Connector\SchedulerConnector\SchedulerConnector;

@@ -5,6 +5,8 @@ return [
 
     'assetic_configuration' => require_once 'assets.config.php',
 
+    'zend-eventmanager' => require_once 'listener.config.php',
+
     'communicator' => [
         'table' => 'communicator',
         'columns' => [

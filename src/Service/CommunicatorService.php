@@ -8,8 +8,8 @@
 namespace Agere\Communicator\Service;
 
 use Agere\Communicator\Model\Communicator;
-use Agere\Core\Service\DomainServiceAbstract;
-use Agere\User\Service\UserService;
+use Popov\ZfcCore\Service\DomainServiceAbstract;
+//use Popov\ZfcUser\Service\UserService;
 
 class CommunicatorService extends DomainServiceAbstract
 {

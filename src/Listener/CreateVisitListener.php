@@ -11,14 +11,14 @@ use Zend\EventManager\ListenerAggregateInterface;
 use Zend\EventManager\ListenerAggregateTrait;
 use Zend\EventManager\Event;
 use Agere\Communicator\Service\CommunicatorService;
-use Agere\User\Service\UserService;
+use Popov\ZfcUser\Service\UserService;
 use Agere\Visit\Controller\VisitController;
 
-class CreateVisitListener implements ListenerAggregateInterface
+class CreateVisitListener /*implements ListenerAggregateInterface*/
 {
-    use ListenerAggregateTrait;
+    //use ListenerAggregateTrait;
 
-    public function __construct(UserService $userService = null, CommunicatorService $communicatorService = null)
+    public function __construct(UserService $userService, CommunicatorService $communicatorService)
     {
         $this->userService = $userService;
         $this->communicatorService = $communicatorService;
@@ -40,16 +40,24 @@ class CreateVisitListener implements ListenerAggregateInterface
         return $this->communicatorService;
     }
 
-    public function attach(EventManagerInterface $events)
+    /*public function attach(EventManagerInterface $events)
     {
         $sem = $events->getSharedManager(); // shared events manager
         $this->listeners[] = $sem->attach(VisitController::class, 'createVisit', function (Event $e) {
             $item = $e->getTarget();
             $visit = $e->getParam('visit');
             $user = $this->getUserService()->find($id = (int) $visit['user']);
-            /** @var CommunicatorService $communicatorService */
             $this->getCommunicatorService()->save($visit, $item, $user);
         }, 100
         );
+    }*/
+
+    public function onCreateVisit($e)
+    {
+        $item = $e->getTarget();
+        $visit = $e->getParam('visit');
+        $user = $this->getUserService()->find($id = (int) $visit['user']);
+        /** @var CommunicatorService $communicatorService */
+        $this->getCommunicatorService()->save($visit, $item, $user);
     }
 }
