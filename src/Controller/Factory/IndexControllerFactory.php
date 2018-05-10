@@ -10,14 +10,14 @@
 namespace Agere\Communicator\Controller\Factory;
 
 use Agere\Communicator\Controller\IndexController;
+use Psr\Container\ContainerInterface;
 
 class IndexControllerFactory
 {
-    public function __invoke($cm)
+    public function __invoke(ContainerInterface $container)
     {
-        $sm = $cm->getServiceLocator();
-        $controller = new IndexController();
-        $controller->setServiceManager($sm);
+        $config = $container->get('config');
+        $controller = new IndexController($config);
 
         return $controller;
     }

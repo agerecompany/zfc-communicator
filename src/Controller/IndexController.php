@@ -8,7 +8,15 @@ use Agere\Communicator\Connector\SchedulerConnector\SchedulerConnector;
 
 class IndexController extends AbstractActionController
 {
-    use ServiceManagerAwareTrait;
+    /**
+     * @var array
+     */
+    protected $config;
+
+    public function __construct(array $config)
+    {
+        $this->config = $config;
+    }
 
     public function indexAction()
     {
@@ -19,8 +27,7 @@ class IndexController extends AbstractActionController
 
     public function syncAction()
     {
-        $sm = $this->getServiceManager();
-        $config = $sm->get('config');
+        $config = $this->config;
         $db = $config['db'];
         $table = $config['communicator']['table'];
         $columns = $config['communicator']['columns'];
